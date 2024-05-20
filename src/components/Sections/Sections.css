@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 2rem;
+}
+
+.section__item {
+  text-align: start;
+}
+
+.line {
+  border-bottom: 1px solid #222;
+  margin: 0.5rem;
+}
+
+.about p {
+  text-align: justify;
+}
+
+.skills {
+  max-width: 320px;
+  grid-area: skills;
+}
+.skills__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hobby {
+  grid-area: hobby;
+}
+.hobby__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: start;
+  padding-left: 2rem;
+}
+
+.projects {
+  grid-area: projects;
+}
+.education {
+  grid-area: education;
+}
+.education__img {
+  width: 100px;
+  height: 100px;
+}
+
+.contacts {
+  display: none;
+  grid-area: contacts;
+}
+
+.social {
+  display: none;
+  grid-area: social;
+}
+
+@media screen and (max-width: 750px) {
+  .education__img {
+    width: 50px;
+    height: 50px;
+  }
+  .projects__list {
+    align-items: center;
+  }
+  .contacts,
+  .social {
+    display: block;
+  }
+  .contacts {
+    color: #222;
+  }
+  .social {
+    color: #222;
+  }
+}
+@media screen and (max-width: 620px) {
+  .section-list {
+    display: block;
+    -moz-column-count: 2; /* Для Firefox */ /* Для Safari и Chrome */
+    column-count: 2;
+  }
+  .skills__item {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .section-list {
+    display: flex;
+    -moz-column-count: 1; /* Для Firefox */ /* Для Safari и Chrome */
+    column-count: 1;
+  }
+}

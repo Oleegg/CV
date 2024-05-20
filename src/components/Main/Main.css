@@ -1,0 +1,32 @@
+.main {
+  background: #fff;
+  padding: 1rem 2rem;
+}
+.main__content {
+  display: grid;
+  grid-template-areas: "skills hobby projects education" "skills languages projects education";
+  padding-top: 1rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .main__content {
+    grid-template-areas: "skills education projects" "skills education projects " "skills hobby  languages ";
+  }
+  .contacts-element {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main__content {
+    grid-template-areas: "contacts social" "skills  projects" "skills education" "hobby languages ";
+  }
+}
+@media screen and (max-width: 620px) {
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
