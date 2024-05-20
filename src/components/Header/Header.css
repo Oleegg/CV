@@ -112,12 +112,12 @@
 
 .burger.open .burger__p::after {
   transform: rotate(45deg);
-  top: -10px;
+  top: 0;
   transition: 1s;
 }
 
 .burger.open .burger__p::before {
-  top: 10px;
+  top: 0;
   transform: rotate(-45deg);
   transition: 1s;
 }
