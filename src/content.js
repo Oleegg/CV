@@ -22,10 +22,10 @@ const content = {
   sections: {
     about: {
       en: {
-        text: "I have been studying JavaScript since 2020. Completed RSSchool frontend development courses. Studied HTML, CSS/SCSS, JS/TS, (React/Next), NodeJS (express/Nest), PostgreSQL/MongoDB, Webpack, Git, Jira, testing. I have been freelancing since the beginning of 2022. I have experience with geodata and OSM-based mapping (OpenStreetMap, Mapshaper, QGIS). Before that I worked in Beltelecom for more than 10 years as an engineer. Was engaged in maintenance of fire and security alarm systems, video surveillance systems, access control systems. I have a B, C category licence. Married, has two children. Responsible, conscientious and self-organised.",
+        text: "I have been studying JavaScript since 2020. Completed RSSchool frontend development courses. Studied HTML, CSS/SCSS, JS/TS, (React/Next), NodeJS (express/Nest), PostgreSQL/MongoDB, Webpack, Git, Jira, testing. I have been freelancing since 2022. I have experience with geodata and OSM-based mapping (OpenStreetMap, Mapshaper, QGIS). Before that I worked in Beltelecom for more than 10 years as an engineer. Was engaged in maintenance of fire and security alarm systems, video surveillance systems, access control systems. I have a B, C category licence. Married, has two children. Responsible, conscientious and self-organised.",
       },
       ru: {
-        text: "Я изучаю JavaScript c 2020 года. Закончил курсы RSSchool frontend development. Изучал HTML, CSS/SCSS, JS/TS, (React/Next), NodeJS (express/Nest), PostgreSQL/MongoDB, Webpack, Git, Jira, тестирование. С начала 2022 года работаю на фрилансере. Имею опыт работы с геоданными и картографированием на основе OSM (OpenStreetMap, Mapshaper, QGIS). До этого работал в Белтелекоме более 10 лет инженером. Занимался обслуживанием систем пожарной и охранной сигнализации, систем видеонаблюдения, систем контроля доступа. Есть права категории В, С. Женат, есть двое детей. Ответственный, добросовестный и самоорганизованный.",
+        text: "Я изучаю JavaScript c 2020 года. Закончил курсы RSSchool frontend development. Изучал HTML, CSS/SCSS, JS/TS, (React/Next), NodeJS (express/Nest), PostgreSQL/MongoDB, Webpack, Git, Jira, тестирование. С 2022 года работаю на фрилансере. Имею опыт работы с геоданными и картографированием на основе OSM (OpenStreetMap, Mapshaper, QGIS). До этого работал в Белтелекоме более 10 лет инженером. Занимался обслуживанием систем пожарной и охранной сигнализации, систем видеонаблюдения, систем контроля доступа. Есть права категории В, С. Женат, есть двое детей. Ответственный, добросовестный и самоорганизованный.",
       },
     },
     skills: [
@@ -147,14 +147,14 @@ const content = {
       en: [
         {
           title: "English",
-          level: "A2, I can read technical literature",
+          level: "A2 - B1, I can read technical literature",
         },
         { title: "Russian", level: "native" },
       ],
       ru: [
         {
           title: "Английский",
-          level: "A2, Могу читать техническую литературу",
+          level: "A2 - B1, Могу читать техническую литературу",
         },
         { title: "Русский", level: "родной" },
       ],

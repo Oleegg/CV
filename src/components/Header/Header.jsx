@@ -1,10 +1,11 @@
 import content from "../../content";
 import "./Header.css";
 import React, { useContext, useEffect, useState } from "react";
-import SocialElement from "./elements/Social";
-import ContactsElement from "./elements/Contacts";
 import photo from "../../images/img/22.jpg";
 import { CHANGE_LANG, Context } from "../../reducers";
+import SocialElement from "../elements/Social";
+import Menu from "../elements/Menu";
+import ContactsElement from "../elements/Contacts";
 
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -52,7 +53,7 @@ const Header = () => {
             {lang === "ru" ? "EN" : "RU"}
           </button>
         </div>
-        {/* <Menu isOpen={isOpenMenu} setIsOpen={setIsOpenMenu} /> */}
+        <Menu isOpen={isOpenMenu} setIsOpen={setIsOpenMenu} />
       </div>
     </header>
   );

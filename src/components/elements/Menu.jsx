@@ -1,8 +1,12 @@
-import { useAppSelector } from "../store/store";
 import content from "../../content";
+import { useContext } from "react";
+import { Context } from "../../reducers";
+import "./Style.css";
 
 const Menu = ({ isOpen, setIsOpen }) => {
-  const leng = useAppSelector((state) => state.app.Languages);
+  const { state } = useContext(Context);
+  const { lang } = state;
+
   const links = content.titles.map((el) => Object.keys(el)[0]);
   const titles = content.titles.map((el) => Object.values(el));
 
@@ -13,7 +17,7 @@ const Menu = ({ isOpen, setIsOpen }) => {
           {titles.map((title, i) => (
             <li key={i}>
               <a href={`#${links[i]}`} onClick={() => setIsOpen(false)}>
-                {title[0][`${leng}`]}
+                {title[0][`${lang}`]}
               </a>
             </li>
           ))}

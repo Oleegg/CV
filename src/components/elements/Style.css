@@ -1,7 +1,6 @@
 .contacts-element {
   display: flex;
   flex: 1;
-  padding-left: 5rem;
   flex-direction: column;
   align-items: start;
   justify-content: center;
@@ -17,4 +16,30 @@
   justify-self: end;
   align-self: center;
   padding-right: 20%;
+}
+
+.menu-wrapper {
+  display: none;
+  background: rgba(0, 0, 0, 0.4196078431);
+  left: 0;
+  top: 150px;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  transform: translateX(100%);
+}
+
+.menu {
+  padding: 2rem;
+  display: inline;
+  background: aliceblue;
+}
+
+@media screen and (max-width: 750px) {
+  .menu-wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    position: absolute;
+  }
 }

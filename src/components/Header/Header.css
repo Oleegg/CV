@@ -3,7 +3,7 @@
   display: flex;
   color: aliceblue;
   justify-content: space-between;
-  max-height: 250px;
+  max-height: 200px;
   letter-spacing: 0.1rem;
 }
 .header__logo {
@@ -16,6 +16,10 @@
 }
 .header__title h1 {
   text-transform: uppercase;
+  margin: 0 10px;
+}
+.header__title h3 {
+  margin: 0 10px;
 }
 .header__content {
   width: 100%;
@@ -48,6 +52,7 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  gap: 10px;
   width: 50%;
   height: 100%;
 }
@@ -59,19 +64,67 @@
   border: 1px solid aliceblue;
 }
 
-.menu-wrapper {
+.burger {
   display: none;
-  background: rgba(0, 0, 0, 0.4196078431);
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  transform: translateX(-100%);
+  cursor: pointer;
+  width: 35px;
+  height: 20px;
+  position: relative;
+  z-index: 10;
 }
 
-.menu {
-  padding: 2rem;
-  display: inline;
+.burger__span {
+  display: block;
+  width: 100%;
+  height: 2px;
   background: aliceblue;
+  transition: 1s;
+}
+
+.burger__p {
+  width: 100%;
+  position: relative;
+}
+
+.burger__p::after,
+.burger__p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: aliceblue;
+  height: 2px;
+  transition: 1s;
+}
+
+.burger__p::after {
+  top: 10px;
+}
+
+.burger__p::before {
+  bottom: 10px;
+}
+
+.burger.open .burger__span {
+  transition: 1s;
+  transform: rotateY(90deg);
+}
+
+.burger.open .burger__p::after {
+  transform: rotate(45deg);
+  top: -10px;
+  transition: 1s;
+}
+
+.burger.open .burger__p::before {
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: 1s;
+}
+
+.menu-wrapper.open {
+  transform: translateX(0);
+  transition: 1s;
 }
 
 @media screen and (max-width: 750px) {
@@ -101,20 +154,31 @@
   .header__link {
     color: black;
   }
-  .menu-wrapper {
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    position: absolute;
+  .burger {
+    display: block;
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
+  .header__btn {
+    width: 100%;
+    justify-content: end;
+  }
+}
+@media screen and (max-width: 440px) {
   .header__content {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
     padding: 0 1rem;
   }
   .header__title {
     font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .header__title h1 {
+    font-size: 1.5em;
+  }
+  .header__btn {
+    justify-content: start;
   }
 }

@@ -8,6 +8,7 @@
 
 .section__item {
   text-align: start;
+  margin: 5px;
 }
 
 .line {
@@ -78,6 +79,10 @@
   }
   .social {
     color: #222;
+  }
+  .social-element {
+    align-items: start;
+    margin-left: 20px;
   }
 }
 @media screen and (max-width: 620px) {

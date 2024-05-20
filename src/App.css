@@ -20,6 +20,9 @@
 .list-item {
   list-style-type: none;
 }
+.list-item p {
+  margin: 10px;
+}
 
 @media screen and (max-width: 750px) {
   .svg {
