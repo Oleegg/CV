@@ -13,14 +13,43 @@ const Skills = () => {
       <h3 id="skills">{lang === "en" ? "SKILLS & TOOLS" : "НАВЫКИ"}</h3>
       <Line />
       <ul className="section-list">
-        {content.sections.skills.map((skill, i) => (
-          <li key={i} className="skills__item">
-            <svg className="svg">
-              <use xlinkHref={`${sprite}#${skill.toLowerCase()}`}></use>
-            </svg>
-            {skill}
-          </li>
-        ))}
+        {content.sections.skills.map((skill, i) => {
+          const s = skill.toLowerCase();
+          if (s === "css") {
+            return (
+              <li key={i} className="skills__item">
+                <svg className="svg">
+                  <use xlinkHref={`${sprite}#${s}`}></use>
+                </svg>
+                <svg className="svg">
+                  <use xlinkHref={`${sprite}#scss`}></use>
+                </svg>
+                {skill}/SCSS
+              </li>
+            );
+          } else if (s === "javascript") {
+            return (
+              <li key={i} className="skills__item">
+                <svg className="svg">
+                  <use xlinkHref={`${sprite}#${s}`}></use>
+                </svg>
+                <svg className="svg">
+                  <use xlinkHref={`${sprite}#typescript`}></use>
+                </svg>
+                JS/TS
+              </li>
+            );
+          } else {
+            return (
+              <li key={i} className="skills__item">
+                <svg className="svg">
+                  <use xlinkHref={`${sprite}#${s}`}></use>
+                </svg>
+                {skill}
+              </li>
+            );
+          }
+        })}
       </ul>
     </section>
   );
